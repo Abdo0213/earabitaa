@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 2px #222831;
+}
+
+
+.accountForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 25px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.inputGroup label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222831;
+}
+
+.inputField {
+    border:1px solid #6A6A6A59;
+    background: transparent;
+    padding: 10px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+/* This targets the last inputGroup's inputField */
+.inputGroup:last-child .inputField {
+    padding-left: 45px;
+}
+
+.codeNumber{
+    position: absolute;
+    top: 27px;
+    padding: 10px;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 16px;
+}

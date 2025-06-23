@@ -1,13 +1,12 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import style from './Footer.module.css';
+import { useAnimatedNavigation } from '../../hooks/useAnimatedNavigation';
+
 
 const Footer = () => {
-    const navigate = useNavigate();
     const location = useLocation();
-
     const currentPath = location.pathname;
-
     const navItems = [
         { name: 'home', path: '/home', icon: 'home', label: 'Home' },
         { name: 'favourite', path: '/favorites', icon: 'heart', label: 'Favorites' },
@@ -15,6 +14,7 @@ const Footer = () => {
         { name: 'chat', path: '/messages', icon: 'chat', label: 'Chat' },
         { name: 'settings', path: '/settings', icon: 'setting', label: 'Settings' },
     ];
+    const animatedNavigate = useAnimatedNavigation();
 
     const isActive = (path) => currentPath === path;
 
@@ -30,7 +30,7 @@ const Footer = () => {
                 {navItems.map(({ name, path, icon, label }) => (
                     <span
                         key={name}
-                        onClick={() => navigate(path)}
+                        onClick={() => animatedNavigate(path)}
                         className={isActive(path) ? style.active : ''}
                     >
                         <img

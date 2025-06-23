@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    background-color: white;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.leftContent {
+    flex: 0 0 25px; /* Fixed width for left icon */
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rightContent {
+    flex: 0 0 25px; /* Fixed width matching left */
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    object-fit: contain;
+}
