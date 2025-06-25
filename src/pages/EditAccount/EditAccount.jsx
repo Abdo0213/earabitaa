@@ -35,6 +35,7 @@ const EditAccount = () => {
                         <input className={style.inputField} type='password' value="" placeholder='New Password'/>
                         <input className={style.inputField} type='password' value="" placeholder='Confirm Password'/>
                     </div>
+                    <button type='submit' className={style.submitButton}>Update account</button>
                 </form>
                 <PasswordReset 
                     isOpen={isResetOpen} 

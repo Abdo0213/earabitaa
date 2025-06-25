@@ -67,16 +67,3 @@ const Popup = ({ isOpen, onClose, children, closeOnOutsideClick = true }) => {
 };
 
 export default Popup;
-
-/*
-const [isPopupOpen, setIsPopupOpen] = useState(false);
-    <Popup 
-        isOpen={isPopupOpen} 
-        onClose={() => setIsPopupOpen(false)}
-    >
-        <h2>Popup Title</h2>
-        <p>This is your popup content!</p>
-        <button onClick={() => setIsPopupOpen(false)}>Close</button>
-    </Popup>
-    Usage
-*/

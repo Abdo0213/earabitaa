@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './AccountMenu.module.css';
 import { useAnimatedNavigation } from '../../hooks/useAnimatedNavigation';
+import Logout from '../Logout/Logout';
 
 const AccountMenu = () => {
     const animatedNavigate = useAnimatedNavigation();
-    
+    const [isLogoutOpen, setLogoutOpen] = useState(false);
+
     const menuItems = [
         { id: 1, label: 'Account information', icon: 'accountIcon.svg', path: '/account' },
         { id: 2, label: 'Posts', icon: 'postsIcon.svg', path: '/home' },
@@ -18,6 +20,17 @@ const AccountMenu = () => {
         animatedNavigate(path);
     };
 
+    const handleLogoutClick = (e) => {
+        e.stopPropagation(); // Prevent event bubbling
+        setLogoutOpen(true);
+    };
+
+    const handleLogoutConfirm = () => {
+        console.log("Logout logic here");
+        // Add your actual logout logic (clear auth tokens, redirect, etc.)
+        setLogoutOpen(false);
+    };
+
     return (
         <>
             <ul className={styles.menuList}>
@@ -25,7 +38,7 @@ const AccountMenu = () => {
                     <li 
                         key={item.id} 
                         className={styles.menuItem} 
-                        onClick={() => handleClick(item.path)}
+                        onClick={item.id === 6 ? handleLogoutClick : () => handleClick(item.path)}
                     >
                         <span className={styles.icon}>
                             <img
@@ -47,6 +60,11 @@ const AccountMenu = () => {
                     </li>
                 ))}
             </ul>
+            <Logout
+                isOpen={isLogoutOpen}
+                onClose={() => setLogoutOpen(false)}
+                onLogout={handleLogoutConfirm}
+            />
         </>
     );
 };
