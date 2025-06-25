@@ -8,7 +8,7 @@ const Account = () => {
             <Header 
                 header="Account information"
                 trailingIcon="editIcon.svg"
-                trailingIconNavigationPath="/home"
+                trailingIconNavigationPath="/edit"
                 backNavigationPath="/settings"
             />
             <div className={style.container}>

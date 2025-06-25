@@ -45,9 +45,14 @@
     border-radius: 7px;
 }
 
-/* This targets the last inputGroup's inputField */
-.inputGroup:last-child .inputField {
-    padding-left: 45px;
+.inputField::placeholder {
+    color: #6A6A6A;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #DC510A33;
 }
 
 .codeNumber{
@@ -58,3 +63,29 @@
     font-weight: 400;
     font-size: 16px;
 }
+
+.inputGroup:nth-child(3) .inputField {
+    padding-left: 45px;
+}
+
+.first {
+    margin-bottom: 20px; /* Check if this applies */
+}
+
+.forgetButton{
+    background: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color); /* Or any color that matches your design */
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 15px; /* Space before the next input */
+    font-size: 15px;
+    align-self: flex-start; /* If your container is flex */
+    font-weight: 500;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: auto;
+}
+
