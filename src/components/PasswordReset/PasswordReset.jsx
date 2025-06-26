@@ -130,7 +130,7 @@ const PasswordReset = ({ isOpen, onClose }) => {
                             />
                         </div>
                         {error && <div className={styles.error}>{error}</div>}
-                        <button type="submit" disabled={isLoading}>
+                        <button className={styles.myButton} type="submit" disabled={isLoading}>
                             {isLoading ? 'Sending...' : 'Continue'}
                         </button>
                     </form>
@@ -158,7 +158,7 @@ const PasswordReset = ({ isOpen, onClose }) => {
                         ))}
                         </div>
                         {error && <div className={styles.error}>{error}</div>}
-                        <button type="submit" disabled={isLoading}>
+                        <button className={styles.myButton} type="submit" disabled={isLoading}>
                         {isLoading ? 'Verifying...' : 'Continue'}
                         </button>
                     </form>
@@ -190,7 +190,7 @@ const PasswordReset = ({ isOpen, onClose }) => {
                         />
                         </div>
                         {error && <div className={styles.error}>{error}</div>}
-                        <button type="submit" disabled={isLoading}>
+                        <button className={styles.myButton} type="submit" disabled={isLoading}>
                         {isLoading ? 'Updating...' : 'Update password'}
                         </button>
                     </form>

@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Header from '../../components/Header/Header'
 import style from './EditAccount.module.css'
 import PasswordReset from '../../components/PasswordReset/PasswordReset';
 
 const EditAccount = () => {
     const [isResetOpen, setIsResetOpen] = useState(false);
+    const fileInputRef = useRef(null);
+
+    const handleImageClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+        // Handle the uploaded file here
+        console.log('Selected file:', file);
+        // You might want to display a preview or upload the file to a server
+        }
+    };
     return (
         <>
             <Header 
@@ -14,6 +28,14 @@ const EditAccount = () => {
             <div className={style.container}>
                 <div className={style.header}>
                     <img src='profile.jpg' alt='profile' className={style.image}></img>
+                    <img src='changePhotoIcon.svg' alt='change' className={style.changeIcon} onClick={handleImageClick}></img>
+                    <input
+                        type="file"
+                        ref={fileInputRef}
+                        onChange={handleFileChange}
+                        accept="image/*"
+                        style={{ display: 'none' }}
+                    />
                 </div>
                 <form className={style.accountForm} onSubmit={(e) => e.preventDefault()}>
                     <div className={style.inputGroup}>

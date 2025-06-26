@@ -22,10 +22,17 @@
     border-radius: 5px;
     width: 139px;
     height: 51px;
+    border: 1px solid var(--primary-color);
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
     .cancelButton{
-        margin-right: 5px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cancelButton{
+        margin-right: 2px;
     }
 }
