@@ -1,0 +1,46 @@
+.container {
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid #DC510A40;
+    margin-bottom: 20px;
+}
+
+.titleContainerFAQ{
+    width: 100px;
+}
+
+.titleContainerContact{
+    width: 130px;
+}
+
+.tabTitle {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #6A6A6A;
+    padding-bottom: 10px;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.activeTab{
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.content{
+    padding: 0;
+}
+
+.faqSection, .contactSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

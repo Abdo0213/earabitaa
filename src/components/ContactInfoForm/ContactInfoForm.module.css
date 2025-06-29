@@ -1,0 +1,144 @@
+.formContainer {
+    padding: 20px 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+}
+
+.imageName {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #f0f0f0;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222831;
+}
+
+.input {
+    width: 90%;
+    padding: 12px 15px;
+    border: 1px solid #6A6A6A;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.input.name{
+    width: 86%;
+}
+
+.input::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+    color: #6A6A6A;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.methodButton {
+    padding: 12px 20px; /* Adjust horizontal padding as needed */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    flex-grow: 0; /* Don't grow to fill space */
+    flex-shrink: 0; /* Don't shrink smaller than content */
+}
+
+.methodButton:hover {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+.methodButton.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Make sure the hidden input doesn't affect layout */
+input[type="hidden"] {
+    display: none;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 400px;
+}
+
+.submitButton:hover {
+    background-color: var(--primary-color);
+}
+
+/* Required field indicator */
+.label[for="phone"]::after {
+    content: ' *';
+    color: #ff4444;
+}
+
+@media (max-width: 1440px) {
+    .submitButton{
+        margin-top: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .submitButton{
+        margin-top: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .submitButton{
+        margin-top: 300px;
+    }
+}
+
+@media (max-width: 325px) {
+    .submitButton{
+        margin-top: 250px;
+    }
+}

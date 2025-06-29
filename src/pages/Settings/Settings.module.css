@@ -43,7 +43,7 @@
 }
 
 .content{
-    width: 368px;
+    width: 75%;
     top: 335px;
     left: 45px;
     padding: 20px;
@@ -53,9 +53,23 @@
     position: absolute;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
     .content{
-        width: 300px;
+        width: 80%;
         left: 25px;
+    }
+}
+
+@media (max-width: 425px) {
+    .content{
+        width: 80%;
+        left: 25px;
+    }
+}
+
+@media (max-width: 375px) {
+    .content{
+        width: 79%;
+        left: 14px;
     }
 }

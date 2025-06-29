@@ -12,6 +12,7 @@ import Layout from './components/Layout/Layout';
 import Account from './pages/Account/Account';
 import AnimatedNavigation from './components/AnimatedNavigation/AnimatedNavigation';
 import EditAccount from './pages/EditAccount/EditAccount';
+import Help from './pages/Help/Help';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/settings" element={<Layout><Settings /></Layout>} />
           <Route path="/account" element={<Layout><Account /></Layout>} />
           <Route path="/edit" element={<Layout><EditAccount /></Layout>} />
+          <Route path="/help" element={<Layout><Help /></Layout>} />
         </Routes>
       </AnimatedNavigation>
     </BrowserRouter>

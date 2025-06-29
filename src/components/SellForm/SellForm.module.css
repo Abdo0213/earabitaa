@@ -1,0 +1,193 @@
+.formTitle {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #DC510A;
+    font-weight: 500;
+    padding-left: 20px;
+    border-bottom: 1px solid #DC510A52;
+}
+
+.formContainer {
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222831;
+}
+
+.required::after {
+    content: ' *';
+    color: red;
+}
+
+.input{
+    width: 90%;
+    padding: 12px 15px;
+    border: 1px solid #6A6A6A;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.input::placeholder{
+    font-family: 'Roboto' sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6A6A6A;
+}
+
+.select {
+    width: 97%;
+    padding: 12px;
+    border: 1px solid #6A6A6A;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #6A6A6A;
+    transition: border-color 0.3s;
+}
+
+.textarea {
+    min-height: 50px;
+    resize: vertical;
+}
+
+.priceContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.priceInputWrapper {
+    flex: 1;
+}
+
+.priceInput {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #6A6A6A;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.statusButtonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.statusButton {
+    padding: 12px 20px; /* Adjust horizontal padding as needed */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    flex-grow: 0; /* Don't grow to fill space */
+    flex-shrink: 0;
+    color: #6A6A6A;
+}
+
+.statusButton:hover {
+    background-color: #eee;
+}
+
+.statusButton.statusButtonActive {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.fileUpload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.uploadIcon{
+    position: absolute;
+    left: 152px;
+    top: 6px;
+    color: #6A6A6A;
+}
+
+.fileInputLabel {
+    width: 100%;
+    padding: 12px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    color: #6A6A6A;
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileName {
+    font-size: 14px;
+    color: #666;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 425px) {
+    .uploadIcon{
+        position: absolute;
+        left: 120px;
+        top: 6px;
+        color: #6A6A6A;
+    }
+}
+
+@media (max-width: 375px) {
+    .select{
+        width: 100%;
+    }
+
+    .uploadIcon{
+        position: absolute;
+        left: 90px;
+        top: 6px;
+        color: #6A6A6A;
+    }
+}
+
+@media (max-width: 320px) {
+    .uploadIcon{
+        position: absolute;
+        left: 70px;
+        top: 6px;
+        color: #6A6A6A;
+    }
+}

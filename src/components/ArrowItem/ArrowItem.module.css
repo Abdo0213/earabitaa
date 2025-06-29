@@ -1,0 +1,74 @@
+.Item{
+    width: 92%;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 15px;
+    border: 1px solid #22283159;
+}
+
+.Question {
+    color: #222831;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto' sans-serif;
+    padding-left: 5px;
+    position: relative;
+}
+.Question.icon{
+    padding-left: 20px;
+}
+
+.Question.show{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #22283159;
+}
+
+.leftIcon{
+    position: absolute;
+    left: -5px;
+    top: 1px;
+}
+
+.toggleIcon {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.Answer {
+    color: #6A6A6A;
+    line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    transform: translateY(-10px);
+    transform-origin: top;
+    transition:
+        opacity 0.3s ease-out,
+        max-height 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 0.3s ease-out,
+        padding 0.3s ease-out;
+    will-change: transform, opacity, max-height, padding;
+    width: 100%; /* ⬅️ lock width to avoid visual "shrinking" */
+    box-sizing: border-box;
+}
+
+.Answer.show {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 10px;
+}
+
+@media (max-width: 375px) {
+    .Item{
+        width: 90%;
+    }
+}

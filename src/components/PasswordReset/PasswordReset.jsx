@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Popup from '../../components/Popup/Popup';
-import styles from './PasswordReset.module.css';
+import style from './PasswordReset.module.css';
 
 const PasswordReset = ({ isOpen, onClose }) => {
     const [step, setStep] = useState(1);
@@ -114,12 +114,12 @@ const PasswordReset = ({ isOpen, onClose }) => {
     return (
         <Popup isOpen={isOpen} onClose={onClose}>
             {step === 1 && (
-                <div className={styles.stepContainer}>
+                <div className={style.stepContainer}>
                     <h2>Forget Password</h2>
                     <p>Enter your Email for the verification process.{'\n'}We will send 4 digits code to your email</p>
                     
                     <form onSubmit={handleEmailSubmit}>
-                        <div className={styles.inputGroup}>
+                        <div className={style.inputGroup}>
                             <label>Email address</label>
                             <input
                                 type="email"
@@ -129,8 +129,8 @@ const PasswordReset = ({ isOpen, onClose }) => {
                                 required
                             />
                         </div>
-                        {error && <div className={styles.error}>{error}</div>}
-                        <button className={styles.myButton} type="submit" disabled={isLoading}>
+                        {error && <div className={style.error}>{error}</div>}
+                        <button className={style.myButton} type="submit" disabled={isLoading}>
                             {isLoading ? 'Sending...' : 'Continue'}
                         </button>
                     </form>
@@ -138,12 +138,12 @@ const PasswordReset = ({ isOpen, onClose }) => {
             )}
 
             {step === 2 && (
-                <div className={styles.stepContainer}>
+                <div className={style.stepContainer}>
                     <h2>Enter 4 Digits Code</h2>
                     <p>Enter the 4 digits code that you received on your email.</p>
                     
                     <form onSubmit={handleCodeSubmit}>
-                        <div className={styles.codeInputs}>
+                        <div className={style.codeInputs}>
                         {[0, 1, 2, 3].map((index) => (
                             <input
                             key={index}
@@ -157,8 +157,8 @@ const PasswordReset = ({ isOpen, onClose }) => {
                             />
                         ))}
                         </div>
-                        {error && <div className={styles.error}>{error}</div>}
-                        <button className={styles.myButton} type="submit" disabled={isLoading}>
+                        {error && <div className={style.error}>{error}</div>}
+                        <button className={style.myButton} type="submit" disabled={isLoading}>
                         {isLoading ? 'Verifying...' : 'Continue'}
                         </button>
                     </form>
@@ -166,12 +166,12 @@ const PasswordReset = ({ isOpen, onClose }) => {
             )}
 
             {step === 3 && (
-                <div className={styles.stepContainer}>
+                <div className={style.stepContainer}>
                     <h2>Reset password</h2>
                     <p>Set the new password for your account so you can login and access all the features</p>
                     
                     <form onSubmit={handlePasswordSubmit}>
-                        <div className={styles.inputGroup}>
+                        <div className={style.inputGroup}>
                         <label>New password</label>
                         <input
                             type="password"
@@ -180,7 +180,7 @@ const PasswordReset = ({ isOpen, onClose }) => {
                             required
                         />
                         </div>
-                        <div className={styles.inputGroup}>
+                        <div className={style.inputGroup}>
                         <label>Re-enter password</label>
                         <input
                             type="password"
@@ -189,8 +189,8 @@ const PasswordReset = ({ isOpen, onClose }) => {
                             required
                         />
                         </div>
-                        {error && <div className={styles.error}>{error}</div>}
-                        <button className={styles.myButton} type="submit" disabled={isLoading}>
+                        {error && <div className={style.error}>{error}</div>}
+                        <button className={style.myButton} type="submit" disabled={isLoading}>
                         {isLoading ? 'Updating...' : 'Update password'}
                         </button>
                     </form>

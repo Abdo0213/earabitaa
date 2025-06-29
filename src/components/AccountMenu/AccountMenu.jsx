@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './AccountMenu.module.css';
+import style from './AccountMenu.module.css';
 import { useAnimatedNavigation } from '../../hooks/useAnimatedNavigation';
 import Logout from '../Logout/Logout';
 
@@ -12,7 +12,7 @@ const AccountMenu = () => {
         { id: 2, label: 'Posts', icon: 'postsIcon.svg', path: '/home' },
         { id: 3, label: 'Privacy policy', icon: 'privacyIcon.svg', path: '/home' },
         { id: 4, label: 'About Earabitaa', icon: 'aboutIcon.svg', path: '/home' },
-        { id: 5, label: 'Help', icon: 'helpIcon.svg', path: '/home' },
+        { id: 5, label: 'Help', icon: 'helpIcon.svg', path: '/help' },
         { id: 6, label: 'Log out', icon: 'logoutIcon.svg', path: '/home' }
     ];
 
@@ -33,14 +33,14 @@ const AccountMenu = () => {
 
     return (
         <>
-            <ul className={styles.menuList}>
+            <ul className={style.menuList}>
                 {menuItems.map((item) => (
                     <li 
                         key={item.id} 
-                        className={styles.menuItem} 
+                        className={style.menuItem} 
                         onClick={item.id === 6 ? handleLogoutClick : () => handleClick(item.path)}
                     >
-                        <span className={styles.icon}>
+                        <span className={style.icon}>
                             <img
                                 src={item.icon}
                                 alt={item.label}
@@ -49,7 +49,7 @@ const AccountMenu = () => {
                             />
                         </span>
                         {item.label}
-                        <span className={styles.arrow}>
+                        <span className={style.arrow}>
                             <img
                                 src='arrowIcon.svg'
                                 alt='arrow'

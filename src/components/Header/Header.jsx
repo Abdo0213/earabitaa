@@ -1,13 +1,15 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './Header.module.css';
+import style from './Header.module.css';
 
 const Header = ({ 
     header, 
     trailingIcon, 
     backNavigationPath,
-    trailingIconNavigationPath 
+    trailingIconNavigationPath,
+    canBack = true,
+    onBack // Add this new prop for custom back handling
 }) => {
+
     const navigate = useNavigate();
 
     const handleNavigation = (path, isBack = false) => {
@@ -15,6 +17,7 @@ const Header = ({
             isBack ? navigate(-1) : navigate(path);
             return;
         }
+        
 
         document.startViewTransition(() => {
             isBack ? navigate(-1) : navigate(path);
@@ -22,10 +25,15 @@ const Header = ({
     };
 
     const handleBackClick = () => {
-        if (backNavigationPath) {
+        if (onBack) {
+            // If custom back handler is provided, use it
+            onBack();
+        } else if (backNavigationPath) {
+            // Otherwise use the path-based navigation
             handleNavigation(backNavigationPath);
         } else {
-            handleNavigation('', true); // Use empty string for back navigation
+            // Fallback to default back navigation
+            handleNavigation('', true);
         }
     };
 
@@ -36,29 +44,30 @@ const Header = ({
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.leftContent} onClick={handleBackClick}>
+        <div className={style.container}>
+            <div className={style.leftContent} onClick={handleBackClick}>
+                {canBack && 
                 <img 
-                src="invertedArrowIcon.svg" 
-                alt="back arrow" 
-                width="25" 
-                height="25" 
-                className={styles.icon}
-                />
+                    src="invertedArrowIcon.svg" 
+                    alt="back arrow" 
+                    width="25" 
+                    height="25" 
+                    className={style.icon}
+                />}
             </div>
             
-            <p className={styles.text}>{header}</p>
+            <p className={style.text}>{header}</p>
             
-            <div className={styles.rightContent}>
+            <div className={style.rightContent}>
                 {trailingIcon && (
-                <img
-                    src={trailingIcon}
-                    alt="action icon"
-                    width="25"
-                    height="25"
-                    className={styles.icon}
-                    onClick={handleTrailingIconClick}
-                />
+                    <img
+                        src={trailingIcon}
+                        alt="action icon"
+                        width="25"
+                        height="25"
+                        className={style.icon}
+                        onClick={handleTrailingIconClick}
+                    />
                 )}
             </div>
         </div>

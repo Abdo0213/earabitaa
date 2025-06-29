@@ -110,6 +110,7 @@
     font-family: 'Roboto' sans-serif;
     font-size: 18px;
     border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 425px) {

@@ -1,0 +1,240 @@
+/* Chat.module.css */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Chat List Styles */
+.chatListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.chatListHeader {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.markAllRead {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    padding-bottom: 2px;
+    top: 0;
+    right: 0;
+}
+
+.chatListContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Chat List Item Styles */
+.chatListItem {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #DC510A26;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #495057;
+}
+
+.chatInfo {
+    flex: 1;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.chatName {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+.chatTime {
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.lastMessage {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: #222831;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.unreadBadge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    position: absolute;
+    top: 35px;
+    right: 8px;
+}
+
+/* No Messages View */
+.noMessagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+}
+
+.noMessagesImage {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 24px;
+}
+
+.noMessagesTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.noMessagesText {
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+    .chatListContainer {
+        width: 94%;
+        padding: 0 12px;
+    }
+
+    .chatListItem {
+        padding: 10px;
+    }
+
+    .chatHeader {
+        margin-bottom: 6px; /* More space between name and message */
+    }
+
+    .chatName {
+        max-width: 180px; /* Slightly wider than 320px version */
+    }
+
+    .lastMessage {
+        padding-right: 30px; /* Creates space between message and time/badge */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1; /* Single line with ellipsis */
+    }
+
+    .unreadBadge {
+        top: 32px;
+        right: 6px;
+    }
+}
+
+/* Add these modifications to your existing Chat.module.css */
+
+@media (max-width: 375px) {
+    .chatListContainer {
+        width: 96%;
+        padding: 0 8px; /* Reduced padding for small screens */
+    }
+
+    .chatListItem {
+        padding: 8px; /* Reduced padding */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+    }
+
+    .avatar {
+        width: 40px; /* Smaller avatar */
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .chatHeader {
+        flex-wrap: wrap;
+    }
+
+    .chatName {
+        font-size: 16px; /* Smaller font size */
+        max-width: 150px; /* Limit width */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .chatTime {
+        font-size: 13px; /* Smaller time text */
+    }
+
+    .lastMessage {
+        font-size: 14px; /* Smaller message text */
+        white-space: normal; /* Allow wrapping */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .unreadBadge {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        top: 30px;
+        right: 4px;
+    }
+}
