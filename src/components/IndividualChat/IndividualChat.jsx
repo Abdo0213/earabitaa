@@ -4,15 +4,24 @@ import style from './IndividualChat.module.css';
 const IndividualChat = ({ chatPartner, onBack, messages: initialMessages }) => {
     const [inputMessage, setInputMessage] = useState('');
     const [messages, setMessages] = useState(initialMessages || []);
-    const messagesContainerRef = useRef(null);
-    const [autoScroll, setAutoScroll] = useState(true);
+    const messagesEndRef = useRef(null);
+    const containerRef = useRef(null);
+
+    // Auto-scroll to bottom when messages change
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
 
     const sendMessage = () => {
         if (inputMessage.trim() !== '') {
             setMessages(prevMessages => [
                 ...prevMessages,
                 { 
-                    id: Date.now(), // Better to use timestamp for unique IDs
+                    id: Date.now(), 
                     text: inputMessage, 
                     time: new Date().toLocaleTimeString('en-US', { 
                         hour: '2-digit', 
@@ -23,34 +32,12 @@ const IndividualChat = ({ chatPartner, onBack, messages: initialMessages }) => {
                 }
             ]);
             setInputMessage('');
-            setAutoScroll(true);
         }
     };
-
-    // Handle scroll events
-    const handleScroll = () => {
-        const container = messagesContainerRef.current;
-        if (container) {
-            // Check if user has scrolled up (not at bottom)
-            const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
-            setAutoScroll(isAtBottom);
-        }
-    };
-
-    // Auto-scroll to bottom when new messages arrive and autoScroll is true
-    useEffect(() => {
-        if (autoScroll && messagesContainerRef.current) {
-            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-        }
-    }, [messages, autoScroll]);
 
     return (
-        <div className={style.container}>
-            <div 
-                ref={messagesContainerRef}
-                className={`${style.messagesContainer} ${style.customScrollbar}`}
-                onScroll={handleScroll}
-            >
+        <div className={style.container} ref={containerRef}>
+            <div className={style.messagesWrapper}>
                 <div className={style.messagesContent}>
                     <div className={style.dateSeparator}>
                         Today
@@ -73,6 +60,7 @@ const IndividualChat = ({ chatPartner, onBack, messages: initialMessages }) => {
                             </div>
                         </div>
                     ))}
+                    <div ref={messagesEndRef} />
                 </div>
             </div>
 

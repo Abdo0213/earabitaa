@@ -1,18 +1,24 @@
-/* IndividualChat.module.css */
 .container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    height: 92vh;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     overflow: hidden;
 }
 
-.messagesContainer {
-    flex-grow: 1;
-    padding: 10px 40px;
+.messagesWrapper {
+    flex: 1;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+}
+
+.messagesContent {
+    margin-top: auto; /* This pushes content to bottom */
+    min-height: min-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .dateSeparator {
@@ -20,8 +26,7 @@
     color: #222831;
     font-weight: 500;
     font-size: 18px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -39,9 +44,10 @@
 }
 
 .messageBubble {
-    padding: 0.75rem;
+    padding: 12px 16px;
     border-radius: 1rem;
     max-width: 50%;
+    word-wrap: break-word;
 }
 
 .messageSentBubble {
@@ -62,148 +68,112 @@
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 12px 16px;
-    border: 1px solid #e5e7eb; /* Added subtle border for received messages */
+    border: 1px solid #e5e7eb;
 }
 
 .messageText {
-    font-size: 17px; /* Changed from 0.875rem to match bubble font size */
-    font-weight: 500; /* Added to match bubble font weight */
-    line-height: 1.4; /* Added for better readability */
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: inherit;
 }
 
 .messageSentBubble .messageTime {
-    color: white;
-    display: block;
-    text-align: right;
-    font-size: 15px;
-    margin-top: 0.25rem;
+      color: white;
+      display: block;
+      text-align: right;
+      font-size: 15px;
+      margin-top: 0.25rem;
 }
 
 .messageReceivedBubble .messageTime {
-    color: #6A6A6A;
-    display: block;
-    text-align: right;
-    font-size: 15px;
-    margin-top: 0.25rem;
+      color: #6A6A6A;
+      display: block;
+      text-align: right;
+      font-size: 15px;
+      margin-top: 0.25rem;
 }
 
 .inputArea {
-    padding: 1rem;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1px;
+      padding: 1rem;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1px;
 }
 
 .messageInput {
-  flex-grow: 1;
-  padding: 5px;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: 'Roboto',sans-serif;
-  border-left: 4px solid var(--primary-color) ;
-  margin-left: 10px;
+    flex-grow: 1;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto',sans-serif;
+    border-left: 4px solid var(--primary-color) ;
+    margin-left: 10px;
 }
 
 .sendButton {
-  margin-left: 10px;
-  padding: 5px;
-  background-color: white;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
+    margin-left: 10px;
+    padding: 5px;
+    background-color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
 
 .attachmentButton {
-  margin-left: 10px;
-  padding: 5px;
-  background-color: white;
-  outline: none;
-  border: none;
-  cursor: pointer;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .container {
+        height: 90vh;
+    }
+    .messagesWrapper{
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .messagesWrapper{
+        padding: 10px 20px;
+    }
+}
 @media (max-width: 320px) {
-  .messageInput{
-    margin-left: 2px;
-  }
+    .messageInput{
+        margin-left: 2px;
+    }
 
-  .attachmentButton {
-    margin-left: 1px;
-  }
+    .attachmentButton {
+        margin-left: 1px;
+    }
 }
-
 
 /* Scrollbar styles */
-.messagesContainer::-webkit-scrollbar {
-  width: 8px;
+.messagesWrapper::-webkit-scrollbar {
+    width: 8px;
 }
 
-.messagesContainer::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+.messagesWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
-.messagesContainer::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
+.messagesWrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
 }
 
-.messagesContainer::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.messagesWrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
-
-
-/*
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-.messagesContainer {
-    flex-grow: 1;
-    padding: 10px 40px;
-    overflow-y: auto;
-}
-
-.dateSeparator {
-    text-align: center;
-    color: #222831;
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-.messageContainer {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.messageSent {
-    justify-content: flex-end;
-}
-
-.messageReceived {
-    justify-content: flex-start;
-}
-
-.messageBubble {
-    padding: 0.75rem;
-    border-radius: 1rem;
-    max-width: 50%;
-}
-
-*/
