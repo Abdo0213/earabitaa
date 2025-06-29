@@ -136,21 +136,25 @@
 }
 
 .noMessagesImage {
-    width: 200px;
-    height: 200px;
+    width: 368px;
+    height: 368px;
     margin-bottom: 24px;
 }
 
 .noMessagesTitle {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
-    color: #000;
+    color: #222831;
     margin-bottom: 8px;
+    font-family: 'Roboto',sans-serif;
 }
 
 .noMessagesText {
-    font-size: 14px;
-    color: #495057;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #6A6A6A;
     margin-bottom: 4px;
 }
 
@@ -236,5 +240,12 @@
         font-size: 12px;
         top: 30px;
         right: 4px;
+    }
+}
+
+@media (max-width: 320px) {
+    .noMessagesImage {
+        width: 300px;
+        height: 300px;
     }
 }

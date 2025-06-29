@@ -47,6 +47,7 @@ const Chat = () => {
             <div className={style.noMessagesText}>
                 <p className={style.noMessagesTitle}>No messages yet</p>
                 <span className={style.noMessagesText}>You have no messages right now.</span>
+                <br></br>
                 <span className={style.noMessagesText}>Come back later</span>
             </div>
         </div>
