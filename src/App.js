@@ -13,6 +13,8 @@ import Account from './pages/Account/Account';
 import AnimatedNavigation from './components/AnimatedNavigation/AnimatedNavigation';
 import EditAccount from './pages/EditAccount/EditAccount';
 import Help from './pages/Help/Help';
+import AllCars from './pages/AllCars/AllCars';
+import CarDetail from './pages/CarDetail/CarDetail';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/login" element={<SignIn/>} />
           <Route path="/register" element={<SignUp/>} />
           <Route path="/home" element={<Layout><Home /></Layout>} />
+          <Route path="/cars" element={<AllCars />} />
+          <Route path="/car/:id" element={<CarDetail />} />
           <Route path="/favorites" element={<Layout><Favorite/></Layout>} />
           <Route path="/sell" element={<Layout><Sell /></Layout>} />
           <Route path="/messages" element={<Layout><Chat /></Layout>} />

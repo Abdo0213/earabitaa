@@ -1,0 +1,79 @@
+/* src/components/CarCard/CarCard.module.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+    max-width: 300px;
+    max-height: 291px;
+    box-shadow: 4px 4px 5px 0px #00000040;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagePlaceholder {
+  height: 150px;
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.twoPosted{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 25px;
+}
+
+.price {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    margin: 0.5rem 0;
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+
+}
+
+.locationIcon{
+    position: absolute;
+    top: -2px;
+    left: -25px;
+}
+
+.posted {
+    margin: 0;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 100%;
+    color: #6A6A6A;
+}

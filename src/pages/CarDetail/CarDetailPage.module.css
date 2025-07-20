@@ -1,0 +1,271 @@
+.carDetail {
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Image Gallery Styles */
+.imageGallery {
+    margin-bottom: 20px;
+}
+
+.imageContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.imageContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.carImage {
+    scroll-snap-align: start;
+    min-width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    object-fit: contain;
+}
+
+.imageIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicator {
+    width: 25px;
+    height: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    background-color: white;
+    cursor: pointer;
+}
+
+.indicator.active {
+    width: 104px;
+    height: 6px;
+    opacity: 1;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+/* Car Info Styles */
+.carTitle {
+    color: #222831;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.carDescription {
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: Roboto, sans-serif;
+    color: #6A6A6A;
+}
+
+.priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+}
+
+.favContainer{
+    align-content: center;
+}
+
+.fav {
+    width: 25px;
+    height: 25px;
+}
+
+.specsSection{
+    background-color: white;
+    border-top: 1px solid #DC510A52;
+    /*border-bottom: 1px solid #DC510A52;*/
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.specItem {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #222831;
+}
+
+.value{
+    padding-left: 10px;
+    color: #6A6A6A;
+}
+
+.locationSection{
+    background-color: white;
+    border-top: 1px solid #DC510A52;
+    /*border-bottom: 1px solid #DC510A52;*/
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.valueTime{
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+    color: #6A6A6A;
+}
+
+.specItem2{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.contactSection {
+    padding: 15px 0;
+    border-top: 1px solid #DC510A52;
+    border-bottom: 1px solid #DC510A52;
+}
+
+.contactContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.contactItem {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0;
+}
+
+.contactIcon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* styles.module.css */
+.reportProduct {
+    background-color: white;
+    box-shadow: 4px 4px 10px 0px #00000040;
+    margin: 10px 0;
+    gap: 10px;
+    border-radius: 7px;
+    padding: 15px 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.reportButton {
+    background: none;
+    border: none;
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}
+
+.messageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.formLabel {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222831; /* Adjust color to match your design */
+}
+
+.messageInput {
+    padding: 12px;
+    border: 1px solid #6A6A6A;
+    border-radius: 4px;
+    min-height: 80px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.messageInput::placeholder {
+    color: #6A6A6A;
+}
+
+.submitButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #b34100;
+}
+
+@media (min-width: 768px) {
+    .carImage {
+        height: 350px;
+    }
+    
+    .carDetail {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .messageForm {
+        width: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .messageForm {
+        width: 200px;
+    }
+}

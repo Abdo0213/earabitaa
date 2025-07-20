@@ -48,7 +48,7 @@ const Header = ({
             <div className={style.leftContent} onClick={handleBackClick}>
                 {canBack && 
                 <img 
-                    src="invertedArrowIcon.svg" 
+                    src={process.env.PUBLIC_URL+'/invertedArrowIcon.svg' }
                     alt="back arrow" 
                     width="25" 
                     height="25" 
