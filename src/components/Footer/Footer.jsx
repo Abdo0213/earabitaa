@@ -9,7 +9,7 @@ const Footer = () => {
     const currentPath = location.pathname;
     const navItems = [
         { name: 'home', path: '/home', icon: 'home', label: 'Home' },
-        { name: 'favourite', path: '/favorites', icon: 'heart', label: 'Favorites' },
+        { name: 'favourite', path: '/favourites', icon: 'heart', label: 'Favourites' },
         { name: 'sell', path: '/sell', icon: 'plus', label: 'Sell' },
         { name: 'chat', path: '/messages', icon: 'chat', label: 'Chat' },
         { name: 'settings', path: '/settings', icon: 'setting', label: 'Settings' },

@@ -1,13 +1,12 @@
-// src/pages/CarDetailPage.jsx
 import React, { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 import styles from './CarDetailPage.module.css';
 import Layout from '../../components/Layout/Layout';
 import Header from '../../components/Header/Header';
 import Popup from '../../components/Popup/Popup';
 
 const CarDetail = () => {
-    const { id } = useParams();
+    //const { id } = useParams();
     const location = useLocation();
     const [activeImageIndex, setActiveImageIndex] = useState(0);
     const [isReportOpen, setReportOpen] = useState(false);
@@ -40,7 +39,7 @@ const CarDetail = () => {
 
     return (
         <Layout>
-            <Header header={car.title || "Car Details"} backNavigationPath="/home"/>
+            <Header header={car.title || "Car Details"}/>
             <div className={styles.carDetail}>
                 {/* Image Gallery Section */}
                 <div className={styles.imageGallery}>

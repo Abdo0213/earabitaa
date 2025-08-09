@@ -8,7 +8,7 @@ const HomeHeader = ({ userName = "Mohamed" }) => {
             <div className={styles.greeting}>
                 <h1>Hi, {userName}</h1>
                 <p>Welcome</p>
-                <img src='notificationIcon.svg' alt='' className={styles.icon}></img>
+                <a href='/notifications'><img src='notificationIcon.svg' alt='' className={styles.icon}></img></a>
             </div>
         </div>
     );

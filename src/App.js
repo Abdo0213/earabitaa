@@ -4,12 +4,13 @@ import SignIn from './pages/SignIn/SignIn';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from './pages/SignUp/SignUp';
 import Home from './pages/Home/Home';
-import Favorite from './pages/Favorite/Favorite';
+import Favourite from './pages/Favourite/Favourite';
 import Sell from './pages/Sell/Sell';
 import Settings from './pages/Settings/Settings';
 import Chat from './pages/Chat/Chat';
 import Layout from './components/Layout/Layout';
 import Account from './pages/Account/Account';
+import Notification from './pages/Notification/Notification';
 import AnimatedNavigation from './components/AnimatedNavigation/AnimatedNavigation';
 import EditAccount from './pages/EditAccount/EditAccount';
 import Help from './pages/Help/Help';
@@ -25,9 +26,10 @@ function App() {
           <Route path="/login" element={<SignIn/>} />
           <Route path="/register" element={<SignUp/>} />
           <Route path="/home" element={<Layout><Home /></Layout>} />
+          <Route path="/notifications" element={<Notification />} />
           <Route path="/cars" element={<AllCars />} />
           <Route path="/car/:id" element={<CarDetail />} />
-          <Route path="/favorites" element={<Layout><Favorite/></Layout>} />
+          <Route path="/favourites" element={<Layout><Favourite/></Layout>} />
           <Route path="/sell" element={<Layout><Sell /></Layout>} />
           <Route path="/messages" element={<Layout><Chat /></Layout>} />
           <Route path="/settings" element={<Layout><Settings /></Layout>} />

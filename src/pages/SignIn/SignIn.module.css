@@ -78,19 +78,16 @@
     line-height: 24px;
     color: #333333;
     margin-bottom: 8px;
-    opacity: 0;
     transform: translateY(-20px);
     animation: slideDown var(--animation-duration) ease-out 0.2s forwards;
 }
 
 .logo {
-    font-family: 'Pattaya', sans-serif;
+    font-family: Pattaya, sans-serif;
     font-size: 46px;
     line-height: 42px;
-    color: var(--primary-color); /* Orange color similar to your design */
+    color: var(--primary-color);
     margin-bottom: 16px;
-    opacity: 0;
-    scale: 0.9;
     animation: popIn var(--animation-duration) ease-out 0.5s forwards;
 }
 

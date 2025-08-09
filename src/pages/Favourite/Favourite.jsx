@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header'
 import { carsData } from '../../data/data';
 import CarList from '../../components/CarList/CarList';
-import Layout from '../../components/Layout/Layout';
+import Footer from '../../components/Footer/Footer';
 import Pagination from '../../components/Pagination/Pagination';
 //import axios from 'axios';
 
-const AllCars = () => {
+const Favourite = () => {
     //const [posts, setPosts] = useState([]);
-    const [posts] = useState(carsData);
+    const [posts] = useState(carsData.filter(car => car.fav === true));
     //const [loading, setLoading] = useState(false);
     const [loading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -33,15 +33,16 @@ const AllCars = () => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     return (
-        <Layout>
+        <>
             <Header 
-                header="All Cars"
+                header="Favourite item"
                 backNavigationPath="/home"
             />
             <CarList cars={currentPosts} showAllLink={false} filterOrAll={true} loading={loading} />
             <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
-        </Layout>
+            <Footer/>
+        </>
     );
 };
 
-export default AllCars;
+export default Favourite;

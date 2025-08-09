@@ -1,4 +1,3 @@
-// src/data/carsData.js
 export const carsData = [
   {
     id: 1,
@@ -12,7 +11,7 @@ export const carsData = [
     phone: "+201008205312",
     image: ['car.svg','car.svg','car.svg','car.svg'],
     carType: "BMW",
-    fav: true
+    fav: false
   },
   {
     id: 2,
@@ -40,7 +39,7 @@ export const carsData = [
     phone: "+201008205314",
     image: ['car.svg','car.svg','car.svg','car.svg'],
     carType: "Audi",
-    fav: true
+    fav: false
   },
   {
     id: 4,
@@ -54,7 +53,7 @@ export const carsData = [
     phone: "+201008205315",
     image: ['car.svg','car.svg','car.svg','car.svg'],
     carType: "Land Rover",
-    fav: true
+    fav: false
   },
   {
     id: 5,
@@ -138,6 +137,146 @@ export const carsData = [
     phone: "+201008205321",
     image: ['car.svg','car.svg','car.svg','car.svg'],
     carType: "Toyota",
+    fav: true
+  },
+  {
+    id: 11,
+    title: "Tesla Model S Plaid",
+    price: "EGP 6500",
+    description: "The Tesla Model S Plaid is the highest-performance sedan in the world with insane acceleration and long electric range.",
+    status: "New",
+    section: "Vehicle",
+    location: "New Cairo",
+    posted: "Just now",
+    phone: "+201008205322",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Tesla",
+    fav: false
+  },
+  {
+    id: 12,
+    title: "Lexus LX 600",
+    price: "EGP 5800",
+    description: "The Lexus LX 600 combines brutal off-road capability with exquisite luxury and craftsmanship.",
+    status: "New",
+    section: "Vehicle",
+    location: "Zamalek, Cairo",
+    posted: "1 hour ago",
+    phone: "+201008205323",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Lexus",
+    fav: true
+  },
+  {
+    id: 13,
+    title: "Ford Mustang GT",
+    price: "EGP 5200",
+    description: "American muscle at its finest - the Ford Mustang GT delivers thrilling V8 performance with iconic styling.",
+    status: "Used",
+    section: "Vehicle",
+    location: "6th of October",
+    posted: "Yesterday",
+    phone: "+201008205324",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Ford",
+    fav: false
+  },
+  {
+    id: 14,
+    title: "Chevrolet Corvette Stingray",
+    price: "EGP 6200",
+    description: "Mid-engine American supercar with exotic looks and phenomenal performance at a fraction of European prices.",
+    status: "New",
+    section: "Vehicle",
+    location: "Giza",
+    posted: "2 days ago",
+    phone: "+201008205325",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Chevrolet",
+    fav: true
+  },
+  {
+    id: 15,
+    title: "Volvo XC90 Recharge",
+    price: "EGP 5400",
+    description: "Luxury Swedish SUV with plug-in hybrid technology offering premium comfort and environmental consciousness.",
+    status: "Used",
+    section: "Vehicle",
+    location: "Maadi",
+    posted: "1 week ago",
+    phone: "+201008205326",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Volvo",
+    fav: false
+  },
+  {
+    id: 16,
+    title: "Jaguar F-Type R",
+    price: "EGP 5900",
+    description: "British sports car with gorgeous design and supercharged V8 power delivering an exhilarating driving experience.",
+    status: "New",
+    section: "Vehicle",
+    location: "Heliopolis",
+    posted: "3 days ago",
+    phone: "+201008205327",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Jaguar",
+    fav: true
+  },
+  {
+    id: 17,
+    title: "Maserati Quattroporte",
+    price: "EGP 6800",
+    description: "Italian luxury sedan with Ferrari-derived engine and handcrafted interior exuding exclusivity.",
+    status: "Used",
+    section: "Vehicle",
+    location: "Sheikh Zayed",
+    posted: "2 weeks ago",
+    phone: "+201008205328",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Maserati",
+    fav: false
+  },
+  {
+    id: 18,
+    title: "Genesis G90",
+    price: "EGP 5100",
+    description: "Korean luxury flagship offering Mercedes S-Class levels of refinement at a more accessible price point.",
+    status: "New",
+    section: "Vehicle",
+    location: "Nasr City",
+    posted: "5 days ago",
+    phone: "+201008205329",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Genesis",
+    fav: true
+  },
+  {
+    id: 19,
+    title: "Bentley Continental GT",
+    price: "EGP 7500",
+    description: "Ultimate grand tourer combining exquisite British craftsmanship with incredible performance.",
+    status: "Used",
+    section: "Vehicle",
+    location: "Dokki",
+    posted: "1 month ago",
+    phone: "+201008205330",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Bentley",
+    fav: false
+  },
+  {
+    id: 20,
+    title: "Lamborghini Urus",
+    price: "EGP 8000",
+    description: "Super SUV with Lamborghini's signature aggressive styling and supercar-level performance.",
+    status: "New",
+    section: "Vehicle",
+    location: "Madinaty, Cairo",
+    posted: "Just now",
+    phone: "+201008205331",
+    image: ['car.svg','car.svg','car.svg','car.svg'],
+    carType: "Lamborghini",
     fav: true
   }
 ];
