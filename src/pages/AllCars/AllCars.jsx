@@ -36,7 +36,6 @@ const AllCars = () => {
         <Layout>
             <Header 
                 header="All Cars"
-                backNavigationPath="/home"
             />
             <CarList cars={currentPosts} showAllLink={false} filterOrAll={true} loading={loading} />
             <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>

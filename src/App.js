@@ -16,6 +16,8 @@ import EditAccount from './pages/EditAccount/EditAccount';
 import Help from './pages/Help/Help';
 import AllCars from './pages/AllCars/AllCars';
 import CarDetail from './pages/CarDetail/CarDetail';
+import MyPosts from './pages/MyPosts/MyPosts';
+import PostInfo from './pages/PostInfo/PostInfo';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
           <Route path="/account" element={<Layout><Account /></Layout>} />
           <Route path="/edit" element={<Layout><EditAccount /></Layout>} />
           <Route path="/help" element={<Layout><Help /></Layout>} />
+          <Route path="/my-posts" element={<Layout><MyPosts /></Layout>} />
+          <Route path="/post-info/:id" element={<Layout><PostInfo /></Layout>} />
         </Routes>
       </AnimatedNavigation>
     </BrowserRouter>

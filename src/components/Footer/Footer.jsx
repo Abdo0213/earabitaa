@@ -34,7 +34,7 @@ const Footer = () => {
                         className={isActive(path) ? style.active : ''}
                     >
                         <img
-                            src={getIconSrc(icon, path)}
+                            src={"/" + getIconSrc(icon, path)}
                             alt={name}
                             width="24"
                             height="24"

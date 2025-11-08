@@ -9,7 +9,7 @@ const AccountMenu = () => {
 
     const menuItems = [
         { id: 1, label: 'Account information', icon: 'accountIcon.svg', path: '/account' },
-        { id: 2, label: 'Posts', icon: 'postsIcon.svg', path: '/home' },
+        { id: 2, label: 'Posts', icon: 'postsIcon.svg', path: '/my-posts' },
         { id: 3, label: 'Privacy policy', icon: 'privacyIcon.svg', path: '/home' },
         { id: 4, label: 'About Earabitaa', icon: 'aboutIcon.svg', path: '/home' },
         { id: 5, label: 'Help', icon: 'helpIcon.svg', path: '/help' },

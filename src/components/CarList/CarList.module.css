@@ -53,14 +53,27 @@
     padding: 0 30px;
 }
 
+.seeAllEndContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 30px;
+    margin-top: 1rem;
+}
+
 @media (max-width: 425px) {
     .CarCardFilter {
         padding: 0 15px;
+    }
+    .seeAllEndContainer {
+        padding: 1rem 15px;
     }
 }
 
 @media (max-width: 375px) {
     .CarCardFilter {
         padding: 0 15px;
+    }
+    .seeAllEndContainer {
+        padding: 1rem 15px;
     }
 }

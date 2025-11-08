@@ -1,0 +1,53 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 10px;
+    gap: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.dateGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.dateLabel {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--primary-color); /* same orange tone as EGP 500 */
+    margin: 10px 0;
+}
+
+.postsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* ensure no extra space between cards */
+}
+
+.emptyState {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: #6A6A6A;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 425px) {
+    .contentWrapper {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 375px) {
+    .contentWrapper {
+        max-width: 300px;
+    }
+}
+

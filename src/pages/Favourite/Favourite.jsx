@@ -4,6 +4,7 @@ import { carsData } from '../../data/data';
 import CarList from '../../components/CarList/CarList';
 import Footer from '../../components/Footer/Footer';
 import Pagination from '../../components/Pagination/Pagination';
+import styles from './Favourite.module.css';
 //import axios from 'axios';
 
 const Favourite = () => {
@@ -38,8 +39,10 @@ const Favourite = () => {
                 header="Favourite item"
                 backNavigationPath="/home"
             />
-            <CarList cars={currentPosts} showAllLink={false} filterOrAll={true} loading={loading} />
-            <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
+            <div className={styles.contentWrapper}>
+                <CarList cars={currentPosts} showAllLink={false} filterOrAll={true} loading={loading} showSeeAllAtEnd={true} />
+                <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
+            </div>
             <Footer/>
         </>
     );

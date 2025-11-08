@@ -7,7 +7,8 @@ const Header = ({
     backNavigationPath,
     trailingIconNavigationPath,
     canBack = true,
-    onBack // Add this new prop for custom back handling
+    onBack, // Add this new prop for custom back handling
+    onTrailingIconClick // Add this new prop for custom trailing icon handling
 }) => {
 
     const navigate = useNavigate();
@@ -38,7 +39,10 @@ const Header = ({
     };
 
     const handleTrailingIconClick = () => {
-        if (trailingIconNavigationPath) {
+        if (onTrailingIconClick) {
+            // If custom handler is provided, use it
+            onTrailingIconClick();
+        } else if (trailingIconNavigationPath) {
             handleNavigation(trailingIconNavigationPath);
         }
     };
@@ -61,7 +65,7 @@ const Header = ({
             <div className={style.rightContent}>
                 {trailingIcon && (
                     <img
-                        src={trailingIcon}
+                        src={"/" + trailingIcon}
                         alt="action icon"
                         width="25"
                         height="25"
