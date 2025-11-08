@@ -8,7 +8,9 @@ const Header = ({
     trailingIconNavigationPath,
     canBack = true,
     onBack, // Add this new prop for custom back handling
-    onTrailingIconClick // Add this new prop for custom trailing icon handling
+    onTrailingIconClick, // Add this new prop for custom trailing icon handling
+    leftIcon, // Custom left icon (e.g., X icon)
+    trailingText // Text to show on the right instead of icon
 }) => {
 
     const navigate = useNavigate();
@@ -50,20 +52,33 @@ const Header = ({
     return (
         <div className={style.container}>
             <div className={style.leftContent} onClick={handleBackClick}>
-                {canBack && 
-                <img 
-                    src={process.env.PUBLIC_URL+'/invertedArrowIcon.svg' }
-                    alt="back arrow" 
-                    width="25" 
-                    height="25" 
-                    className={style.icon}
-                />}
+                {leftIcon ? (
+                    <img 
+                        src={leftIcon}
+                        alt="close" 
+                        width="25" 
+                        height="25" 
+                        className={style.icon}
+                    />
+                ) : canBack && (
+                    <img 
+                        src={process.env.PUBLIC_URL+'/invertedArrowIcon.svg' }
+                        alt="back arrow" 
+                        width="25" 
+                        height="25" 
+                        className={style.icon}
+                    />
+                )}
             </div>
             
-            <p className={style.text}>{header}</p>
+            <p className={style.text}>{header || ''}</p>
             
             <div className={style.rightContent}>
-                {trailingIcon && (
+                {trailingText ? (
+                    <span className={style.trailingText} onClick={handleTrailingIconClick}>
+                        {trailingText}
+                    </span>
+                ) : trailingIcon && (
                     <img
                         src={"/" + trailingIcon}
                         alt="action icon"

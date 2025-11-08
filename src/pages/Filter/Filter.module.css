@@ -1,0 +1,192 @@
+:root {
+  --primary-color: #E65100; /* Orange tone like the "See results" button */
+}
+
+.pageTitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #222831;
+  margin: 0 0 0px 0;
+  padding: 0 0 20px 10px;
+  border-bottom: 1px solid #DC510A52;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-height: calc(100vh - 120px);
+  background-color: #fff;
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.filterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #DC510A52;
+}
+
+.filterItem:last-child {
+  border-bottom: none;
+}
+
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.labelText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #222831;
+}
+
+.selectedValue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #222831;
+}
+
+.selectedValueText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #222831;
+}
+
+.selectInput {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6A6A6A;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+
+.selectedValue .selectInput {
+  flex: 1;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.changeButton {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton svg {
+  stroke: #222831;
+  width: 20px;
+  height: 20px;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.priceInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #222831;
+  background-color: #FAFAFA;
+}
+
+.priceInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.priceInput::placeholder {
+  color: #BDBDBD;
+}
+
+.resultsButton {
+  width: 90%;
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 200px auto;
+  margin-bottom: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 6px rgba(230, 81, 0, 0.3);
+}
+
+.resultsButton:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+@media (max-width: 425px) {
+  .contentWrapper {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+    .filterItem {
+        padding: 14px;
+    }
+    .priceInput {
+        width: 100px;
+    }
+}
+

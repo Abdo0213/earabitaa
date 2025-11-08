@@ -18,6 +18,7 @@ import AllCars from './pages/AllCars/AllCars';
 import CarDetail from './pages/CarDetail/CarDetail';
 import MyPosts from './pages/MyPosts/MyPosts';
 import PostInfo from './pages/PostInfo/PostInfo';
+import Filter from './pages/Filter/Filter';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/help" element={<Layout><Help /></Layout>} />
           <Route path="/my-posts" element={<Layout><MyPosts /></Layout>} />
           <Route path="/post-info/:id" element={<Layout><PostInfo /></Layout>} />
+          <Route path="/filter" element={<Layout><Filter /></Layout>} />
         </Routes>
       </AnimatedNavigation>
     </BrowserRouter>
